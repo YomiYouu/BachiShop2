@@ -49,6 +49,10 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
 
             }
+            R.id.itemCuenta -> {
+                val intent = Intent(this, Cuenta::class.java)
+                startActivity(intent)
+            }
         }
         return super.onOptionsItemSelected(item)
     }

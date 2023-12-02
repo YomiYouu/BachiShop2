@@ -1,33 +1,35 @@
 package com.example.bachishop2
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
+import android.graphics.BitmapFactory
+import android.os.Bundle
 import android.util.Log
 import android.view.Menu
-import android.view.View
-import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.bachishop2.databinding.ActivityIniciarSesionBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.Firebase
-
-
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.auth
+import java.net.URL
+
 
 private var GOOGLE_SIGN_IN = 100
 class IniciarSesion : AppCompatActivity() {
     private lateinit var  binding: ActivityIniciarSesionBinding
     private lateinit var auth: FirebaseAuth
-
+    private lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        sharedPreferences = getSharedPreferences("MyPreferences", Context.MODE_PRIVATE)
         // Initialize Firebase Auth
         auth = Firebase.auth
 
@@ -82,14 +84,16 @@ class IniciarSesion : AppCompatActivity() {
                     val credential = GoogleAuthProvider.getCredential(account.idToken, null)
                     auth.signInWithCredential(credential).addOnCompleteListener {
                         if (it.isSuccessful) {
-                        val intent = Intent(this, MainActivity::class.java)
+                            val intent = Intent(this, MainActivity::class.java)
+                            val email: String = it.result.user?.email as String
+                            val img: String = it.result.user?.photoUrl.toString()
                             startActivity(intent)
                             Toast.makeText(
                                 baseContext,
                                 "Cuenta iniciada con exito.",
                                 Toast.LENGTH_LONG,
                             ).show()
-
+                            saveData(email, img)
                         } else {
 
                             Toast.makeText(
@@ -121,7 +125,8 @@ class IniciarSesion : AppCompatActivity() {
                         "Cuenta iniciada con exito.",
                         Toast.LENGTH_LONG,
                     ).show()
-                    val user = auth.currentUser
+                    val user = auth.currentUser?.email as String
+                    saveData(user, "")
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
                     //updateUI(user)
@@ -142,5 +147,14 @@ class IniciarSesion : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.herramienta_de_barras, menu)
         return true
+    }
+    private fun saveData(email: String, photoUrl: String){
+        val editor = sharedPreferences.edit()
+        if(photoUrl!=""){
+            editor.putString("foto", photoUrl)
+        }
+
+        editor.putString("correo", email)
+        editor.apply()
     }
 }
