@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cuenta">
+
+    <TextView
+        android:id="@+id/datos"
+        android:layout_width="211dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="388dp"
+        android:text="Product"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgno"
+        app:layout_constraintVertical_bias="0.0"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/imgno"
+        android:layout_width="237dp"
+        android:layout_height="140dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.191"
+        tools:src="@drawable/osete" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/añadirCesta"
+        android:layout_width="129dp"
+        android:layout_height="41dp"
+        android:background="@drawable/gradient"
+        android:text="Añadir a la cesta"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descript" />
+
+    <ImageView
+        android:id="@+id/volver3"
+        android:layout_width="33dp"
+        android:layout_height="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.082"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.091"
+        app:srcCompat="@drawable/baseline_keyboard_return_24" />
+
+    <TextView
+        android:id="@+id/prec"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="19.99 €"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="@+id/datos"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/datos"
+        app:layout_constraintTop_toBottomOf="@+id/datos" />
+
+    <TextView
+        android:id="@+id/descript"
+        android:layout_width="228dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="36dp"
+        android:text="TextView"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/prec"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="@+id/prec"
+        app:layout_constraintTop_toBottomOf="@+id/prec" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,8 @@
 package com.example.bachishop2
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -16,7 +18,7 @@ import com.example.bachishop2.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-
+    private lateinit var sharedPreferences: SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -39,6 +41,14 @@ class MainActivity : AppCompatActivity() {
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.herramienta_de_barras, menu)
+        sharedPreferences = getSharedPreferences("MyPreferences", Context.MODE_PRIVATE)
+        if(sharedPreferences.contains("correo")){
+            menu?.getItem(1)?.isVisible = false
+            menu?.getItem(0)?.isVisible = true
+        }
+
+
+
         return super.onCreateOptionsMenu(menu)
     }
 

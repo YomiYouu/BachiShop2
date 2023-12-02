@@ -8,8 +8,10 @@ import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.forEach
 import com.example.bachishop2.databinding.ActivityIniciarSesionBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -26,6 +28,7 @@ class IniciarSesion : AppCompatActivity() {
     private lateinit var  binding: ActivityIniciarSesionBinding
     private lateinit var auth: FirebaseAuth
     private lateinit var sharedPreferences: SharedPreferences
+    private lateinit var menu: Menu
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -87,13 +90,14 @@ class IniciarSesion : AppCompatActivity() {
                             val intent = Intent(this, MainActivity::class.java)
                             val email: String = it.result.user?.email as String
                             val img: String = it.result.user?.photoUrl.toString()
-                            startActivity(intent)
+
                             Toast.makeText(
                                 baseContext,
                                 "Cuenta iniciada con exito.",
                                 Toast.LENGTH_LONG,
                             ).show()
                             saveData(email, img)
+                            startActivity(intent)
                         } else {
 
                             Toast.makeText(
@@ -146,15 +150,19 @@ class IniciarSesion : AppCompatActivity() {
     }
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.herramienta_de_barras, menu)
+        this.menu = menu
         return true
     }
     private fun saveData(email: String, photoUrl: String){
+
         val editor = sharedPreferences.edit()
+
         if(photoUrl!=""){
             editor.putString("foto", photoUrl)
         }
 
         editor.putString("correo", email)
         editor.apply()
+
     }
 }

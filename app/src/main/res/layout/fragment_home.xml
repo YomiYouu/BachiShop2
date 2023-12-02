@@ -50,7 +50,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-
             android:id="@+id/listado1">
             <ImageView
                 android:layout_width="128dp"
@@ -107,7 +106,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/listado2">
 
             <ImageView
                 android:layout_width="128dp"
@@ -161,12 +161,14 @@
         android:layout_height="wrap_content"
         android:fillViewport="true"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp">
+        android:layout_marginLeft="10dp"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/listado3">
 
             <ImageView
                 android:layout_width="128dp"
@@ -224,7 +226,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/listado4">
 
             <ImageView
                 android:layout_width="128dp"
@@ -284,7 +287,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/listado5">
 
             <ImageView
                 android:layout_width="128dp"
