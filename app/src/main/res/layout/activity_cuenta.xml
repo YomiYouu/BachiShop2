@@ -26,4 +26,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@drawable/usuario" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/closeSesion"
+        android:layout_width="129dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="84dp"
+        android:background="@drawable/gradient"
+        android:text="Cerrar sesion"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cuentaa"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/volver2"
+        android:layout_width="33dp"
+        android:layout_height="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.082"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.091"
+        app:srcCompat="@drawable/baseline_keyboard_return_24" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
