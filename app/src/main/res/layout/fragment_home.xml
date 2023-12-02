@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/seccion1"
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_weight="0"
+        android:text="Animales Marinos"
+        android:textStyle="bold" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:fillViewport="true"
+        android:id="@+id/lista1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:id="@+id/listado1">
+            <ImageView
+                android:layout_width="128dp"
+                android:layout_height="99dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/goga"
+                android:id="@+id/uno1">
+
+            </ImageView>
+            <ImageView
+                android:layout_width="128dp"
+                android:layout_height="99dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/goga"
+                android:id="@+id/uno2">
+
+            </ImageView>
+            <ImageView
+                android:layout_width="128dp"
+                android:layout_height="99dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/goga"
+                android:id="@+id/uno">
+
+            </ImageView>
+            <ImageView
+                android:layout_width="128dp"
+                android:layout_height="99dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/goga"
+                android:id="@+id/uno3">
+
+            </ImageView>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+    <TextView
+        android:id="@+id/seccion2"
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:text="Animales Terrestres"
+        android:textStyle="bold"
+        />
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="128dp"
+                android:layout_height="99dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/goga"
+                >
+
+            </ImageView>
+
+            <ImageView
+                android:layout_width="128dp"
+                android:layout_height="99dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/goga"
+                >
+
+            </ImageView>
+
+            <ImageView
+                android:layout_width="128dp"
+                android:layout_height="99dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/goga"
+                >
+
+            </ImageView>
+
+            <ImageView
+                android:layout_width="128dp"
+                android:layout_height="99dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/goga"
+                >
+
+            </ImageView>
+        </LinearLayout>
+    </HorizontalScrollView>
+    <TextView
+        android:id="@+id/seccion3"
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:text="Aves"
+        android:textStyle="bold"
+        />
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="128dp"
+                android:layout_height="99dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/goga"
+                >
+
+            </ImageView>
+
+            <ImageView
+                android:layout_width="128dp"
+                android:layout_height="99dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/goga"
+                >
+
+            </ImageView>
+
+            <ImageView
+                android:layout_width="128dp"
+                android:layout_height="99dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/goga"
+                >
+
+            </ImageView>
+
+            <ImageView
+                android:layout_width="128dp"
+                android:layout_height="99dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/goga"
+                >
+
+            </ImageView>
+        </LinearLayout>
+    </HorizontalScrollView><TextView
+    android:id="@+id/seccion4"
+    android:layout_width="142dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="0"
+    android:layout_marginTop="30dp"
+    android:layout_marginLeft="10dp"
+    android:text="Reptiles"
+    android:textStyle="bold"
+    />
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="128dp"
+                android:layout_height="99dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/goga"
+                >
+
+            </ImageView>
+
+            <ImageView
+                android:layout_width="128dp"
+                android:layout_height="99dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/goga"
+                >
+
+            </ImageView>
+
+            <ImageView
+                android:layout_width="128dp"
+                android:layout_height="99dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/goga"
+                >
+
+            </ImageView>
+
+            <ImageView
+                android:layout_width="128dp"
+                android:layout_height="99dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/goga"
+                >
+
+            </ImageView>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/seccion5"
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:text="Animales fantasticos"
+        android:textStyle="bold"
+        />
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="128dp"
+                android:layout_height="99dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/goga"
+                >
+
+            </ImageView>
+
+            <ImageView
+                android:layout_width="128dp"
+                android:layout_height="99dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/goga"
+                >
+
+            </ImageView>
+
+            <ImageView
+                android:layout_width="128dp"
+                android:layout_height="99dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/goga"
+                >
+
+            </ImageView>
+
+            <ImageView
+                android:layout_width="128dp"
+                android:layout_height="99dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/goga"
+                >
+
+            </ImageView>
+        </LinearLayout>
+    </HorizontalScrollView>
+    <!--Esto es solo un separador-->
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginBottom="50dp"
+        >
+
+    </TextView>
+</LinearLayout>
+
+
+</LinearLayout>
+</ScrollView>

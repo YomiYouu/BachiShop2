@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "521452888061",
+    "project_id": "bachishop2",
+    "storage_bucket": "bachishop2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:521452888061:android:c4d00323ac0ce2d34f4394",
+        "android_client_info": {
+          "package_name": "com.example.bachishop2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "521452888061-kibv2cartjk2kglubii9me5scc9dbvff.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bachishop2",
+            "certificate_hash": "5a028ff9c417ab33dae8f9d6daa2a6c7d7209696"
+          }
+        },
+        {
+          "client_id": "521452888061-hoc3b04te4h4u58id0163jb77emjn3u7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJ5Hd2VoPH8_nF3UP5B8uKHLrkIaz_Cq0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "521452888061-hoc3b04te4h4u58id0163jb77emjn3u7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

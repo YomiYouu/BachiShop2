@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BachiShop2</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="Contacto">Contacto</string>
+    <string name="client_id">521452888061-hoc3b04te4h4u58id0163jb77emjn3u7.apps.googleusercontent.com</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_mapeado">mapeado</string>
+</resources>
