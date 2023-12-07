@@ -25,6 +25,7 @@ class Cuenta : AppCompatActivity() {
        /* val url = URL(sharedPreferences.getString("foto", ""))
         val bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream())
         binding.perfil.setImageBitmap(bmp)*/
+
         binding.cuentaa.text = "Email: " + sharedPreferences.getString("correo", "")
 
         binding.closeSesion.setOnClickListener {

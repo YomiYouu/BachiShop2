@@ -34,15 +34,15 @@
         tools:src="@drawable/osete" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/añadirCesta"
+        android:id="@+id/cestilla"
         android:layout_width="129dp"
         android:layout_height="41dp"
         android:background="@drawable/gradient"
         android:text="Añadir a la cesta"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/descript"
+        app:layout_constraintStart_toStartOf="@+id/descript"
         app:layout_constraintTop_toBottomOf="@+id/descript" />
 
     <ImageView
