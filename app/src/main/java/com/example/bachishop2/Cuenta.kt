@@ -6,6 +6,8 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.BitmapFactory
 import android.os.Bundle
+import android.os.StrictMode
+import android.os.StrictMode.ThreadPolicy
 import androidx.appcompat.app.AppCompatActivity
 import com.example.bachishop2.databinding.ActivityCuentaBinding
 import java.net.URL
@@ -22,9 +24,20 @@ class Cuenta : AppCompatActivity() {
         setContentView(binding.root)
 
         sharedPreferences = getSharedPreferences("MyPreferences", MODE_PRIVATE)
-       /* val url = URL(sharedPreferences.getString("foto", ""))
-        val bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream())
-        binding.perfil.setImageBitmap(bmp)*/
+
+
+        val url = URL(sharedPreferences.getString("foto", ""))
+        if(url.equals(""))
+            binding.perfil.setImageResource(R.drawable.usuario)
+        else {
+            val policy = ThreadPolicy.Builder()
+                .permitAll().build()
+            StrictMode.setThreadPolicy(policy)
+            val bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream())
+            binding.perfil.setImageBitmap(bmp)
+        }
+
+
 
         binding.cuentaa.text = "Email: " + sharedPreferences.getString("correo", "")
 

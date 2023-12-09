@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:id="@+id/listado1">
-            <ImageView
+           <!-- <ImageView
                 android:layout_width="128dp"
                 android:layout_height="99dp"
                 android:scaleType="centerInside"
@@ -83,7 +83,7 @@
                 android:id="@+id/uno3">
 
             </ImageView>
-
+-->
         </LinearLayout>
     </HorizontalScrollView>
     <TextView
@@ -109,7 +109,7 @@
             android:orientation="horizontal"
             android:id="@+id/listado2">
 
-            <ImageView
+         <!--   <ImageView
                 android:layout_width="128dp"
                 android:layout_height="99dp"
                 android:scaleType="centerInside"
@@ -143,7 +143,7 @@
                 android:src="@drawable/goga"
                 >
 
-            </ImageView>
+            </ImageView>-->
         </LinearLayout>
     </HorizontalScrollView>
     <TextView
@@ -170,7 +170,7 @@
             android:orientation="horizontal"
             android:id="@+id/listado3">
 
-            <ImageView
+          <!--  <ImageView
                 android:layout_width="128dp"
                 android:layout_height="99dp"
                 android:scaleType="centerInside"
@@ -204,7 +204,7 @@
                 android:src="@drawable/goga"
                 >
 
-            </ImageView>
+            </ImageView>-->
         </LinearLayout>
     </HorizontalScrollView><TextView
     android:id="@+id/seccion4"
@@ -229,7 +229,7 @@
             android:orientation="horizontal"
             android:id="@+id/listado4">
 
-            <ImageView
+        <!--    <ImageView
                 android:layout_width="128dp"
                 android:layout_height="99dp"
                 android:scaleType="centerInside"
@@ -263,7 +263,7 @@
                 android:src="@drawable/goga"
                 >
 
-            </ImageView>
+            </ImageView>-->
         </LinearLayout>
     </HorizontalScrollView>
 
@@ -290,7 +290,7 @@
             android:orientation="horizontal"
             android:id="@+id/listado5">
 
-            <ImageView
+          <!--  <ImageView
                 android:layout_width="128dp"
                 android:layout_height="99dp"
                 android:scaleType="centerInside"
@@ -324,7 +324,7 @@
                 android:src="@drawable/goga"
                 >
 
-            </ImageView>
+            </ImageView>-->
         </LinearLayout>
     </HorizontalScrollView>
     <!--Esto es solo un separador-->

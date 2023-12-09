@@ -10,6 +10,11 @@
         android:title="Iniciar Sesión"
         android:visible="true" />
 
-
+    <item
+        android:id="@+id/itemSensol"
+        android:title="Sensor"/>
+    <item
+        android:id="@+id/itemAñadir"
+        android:title="Añadir producto"/>
 
 </menu>

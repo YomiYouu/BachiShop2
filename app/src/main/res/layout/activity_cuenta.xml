@@ -6,26 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".Cuenta">
 
-    <TextView
-        android:id="@+id/cuentaa"
-        android:layout_width="181dp"
-        android:layout_height="15dp"
-        android:layout_marginBottom="388dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/perfil" />
-
     <ImageView
         android:id="@+id/perfil"
         android:layout_width="237dp"
         android:layout_height="140dp"
-        android:layout_marginTop="164dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/usuario" />
+        android:layout_marginTop="164dp" />
+
+    <TextView
+        android:id="@+id/cuentaa"
+        android:layout_width="198dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="50dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/perfil"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/perfil"
+        app:layout_constraintTop_toBottomOf="@+id/perfil" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/closeSesion"
@@ -36,8 +36,8 @@
         android:text="Cerrar sesion"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/cuentaa"
+        app:layout_constraintStart_toStartOf="@+id/cuentaa"
         app:layout_constraintTop_toBottomOf="@+id/cuentaa"
         app:layout_constraintVertical_bias="0.0" />
 

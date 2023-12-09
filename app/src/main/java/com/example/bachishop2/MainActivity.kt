@@ -1,5 +1,6 @@
 package com.example.bachishop2
 
+import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
@@ -62,6 +63,29 @@ class MainActivity : AppCompatActivity() {
             R.id.itemCuenta -> {
                 val intent = Intent(this, Cuenta::class.java)
                 startActivity(intent)
+            }
+            R.id.itemSensol -> {
+                val intent = Intent(this, Sensor::class.java)
+                startActivity(intent)
+            }
+            R.id.itemAñadir -> {
+                if (!sharedPreferences.contains("correo")){
+
+                    AlertDialog.Builder(this)
+                        .setTitle("ATENCION")
+                        .setMessage("Debes iniciar sesion para poder añadir un producto nuevo")
+                        .setCancelable(false)
+                        .setPositiveButton(android.R.string.ok, {
+                                dialog, which ->
+                            run {
+                                val intent = Intent(this, IniciarSesion::class.java)
+                                startActivity(intent)
+                            }
+                        }).show()
+                }else {
+                    val intent = Intent(this, addProduct::class.java)
+                    startActivity(intent)
+                }
             }
         }
         return super.onOptionsItemSelected(item)
