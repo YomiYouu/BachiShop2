@@ -12,6 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.get
 import androidx.fragment.app.Fragment
@@ -21,6 +22,7 @@ import com.example.bachishop2.MainActivity
 import com.example.bachishop2.databinding.FragmentDashboardBinding
 import com.example.bachishop2.producto
 import com.example.bachishop2.ui.home.HomeFragment
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -84,13 +86,35 @@ class DashboardFragment : Fragment() {
                         }
                     }).show()
             }else {
-                editor.putFloat("cuenta", 0f)
-                editor.putString("carrito", null)
-                editor.apply()
-                val intent = Intent(this.context, MainActivity::class.java)
+                AlertDialog.Builder(this.context)
+                    .setTitle("Esta a punto de realizar una compra.")
+                    .setMessage("Seguro que desea gastarse "+ precio.toString()+"€?")
+                    .setCancelable(false)
+                    .setPositiveButton(android.R.string.ok, {
+                            dialog, which -> editor.putFloat("cuenta", 0f)
+                        editor.putString("carrito", null)
+                        editor.apply()
+                        val intent = Intent(this.context, MainActivity::class.java)
+                        Toast.makeText(
+                            context,
+                            "Compra realizada con exito.",
+                            Toast.LENGTH_LONG,
+                        ).show()
+                        startActivity(intent)
+                    })
+                    .setNegativeButton(android.R.string.cancel, {dialog, which ->
+                        Snackbar.make(binding.root, "Compra cancelada", Snackbar.LENGTH_LONG).show()
+                    }).show()
 
-                startActivity(intent)
             }
+        }
+        binding.vacial.setOnClickListener {
+            editor.putFloat("cuenta", 0f)
+            editor.putString("carrito", null)
+            editor.apply()
+            val intent = Intent(this.context, MainActivity::class.java)
+
+            startActivity(intent)
         }
 
         return root

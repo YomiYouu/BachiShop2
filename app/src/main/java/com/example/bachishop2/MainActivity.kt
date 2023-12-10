@@ -43,9 +43,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.herramienta_de_barras, menu)
         sharedPreferences = getSharedPreferences("MyPreferences", Context.MODE_PRIVATE)
+        var email: String? = sharedPreferences.getString("correo", "")
         if(sharedPreferences.contains("correo")){
-            menu?.getItem(1)?.isVisible = false
-            menu?.getItem(0)?.isVisible = true
+            menu?.getItem(2)?.isVisible = false
+            menu?.getItem(1)?.isVisible = true
+        }
+        if (!email.equals("ryunex03@gmail.com")){
+            menu?.getItem(4)?.isVisible = false
         }
 
 
@@ -69,23 +73,9 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }
             R.id.itemAñadir -> {
-                if (!sharedPreferences.contains("correo")){
-
-                    AlertDialog.Builder(this)
-                        .setTitle("ATENCION")
-                        .setMessage("Debes iniciar sesion para poder añadir un producto nuevo")
-                        .setCancelable(false)
-                        .setPositiveButton(android.R.string.ok, {
-                                dialog, which ->
-                            run {
-                                val intent = Intent(this, IniciarSesion::class.java)
-                                startActivity(intent)
-                            }
-                        }).show()
-                }else {
                     val intent = Intent(this, addProduct::class.java)
                     startActivity(intent)
-                }
+
             }
         }
         return super.onOptionsItemSelected(item)

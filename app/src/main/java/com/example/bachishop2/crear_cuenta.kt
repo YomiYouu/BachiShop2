@@ -45,6 +45,9 @@ class crear_cuenta : AppCompatActivity() {
              val intent = Intent(this, IniciarSesion::class.java)
              startActivity(intent)
          }
+        binding.returnn2.setOnClickListener {
+            finish()
+        }
     }
 
     private fun crearCuenta(email:String, password:String){

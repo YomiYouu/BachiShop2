@@ -51,10 +51,10 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textHome
+       /* val textView: TextView = binding.textHome
         homeViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
-        }
+        }*/
 
 
 
@@ -117,6 +117,7 @@ class HomeFragment : Fragment() {
                         else{
                             setImageResource(R.drawable.salchichonio)
                         }
+
                         var factor:Float = context.resources.displayMetrics.density
 
                         layoutParams = RelativeLayout.LayoutParams((128 * factor).toInt(),(99* factor).toInt())

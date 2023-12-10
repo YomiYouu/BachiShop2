@@ -97,6 +97,9 @@ class IniciarSesion : AppCompatActivity() {
                                 "Cuenta iniciada con exito.",
                                 Toast.LENGTH_LONG,
                             ).show()
+                            val editor = sharedPreferences.edit()
+                            editor.putString("correoG", email)
+                            editor.apply()
                             saveData(email, img)
                             startActivity(intent)
                         } else {

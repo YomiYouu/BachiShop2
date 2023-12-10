@@ -4,53 +4,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Cuenta">
-
-    <ImageView
-        android:id="@+id/perfil"
-        android:layout_width="237dp"
-        android:layout_height="140dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="164dp" />
-
-    <TextView
-        android:id="@+id/cuentaa"
-        android:layout_width="198dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="50dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="@+id/perfil"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="@+id/perfil"
-        app:layout_constraintTop_toBottomOf="@+id/perfil" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/closeSesion"
-        android:layout_width="129dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="84dp"
-        android:background="@drawable/gradient"
-        android:text="Cerrar sesion"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/cuentaa"
-        app:layout_constraintStart_toStartOf="@+id/cuentaa"
-        app:layout_constraintTop_toBottomOf="@+id/cuentaa"
-        app:layout_constraintVertical_bias="0.0" />
+    tools:context=".Cuenta"
+    android:background="@drawable/fondonube">
 
     <ImageView
         android:id="@+id/volver2"
-        android:layout_width="33dp"
-        android:layout_height="32dp"
+        android:layout_width="43dp"
+        android:layout_height="30dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/patras"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.082"
+        app:layout_constraintHorizontal_bias="0.078"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.091"
-        app:srcCompat="@drawable/baseline_keyboard_return_24" />
+        app:layout_constraintVertical_bias="0.037" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="300dp"
+        android:layout_height="410dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/volver2"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:background="@drawable/background_rounded">
+
+        <ImageView
+            android:id="@+id/perfil"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/cuentaa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/perfil"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="@+id/perfil"
+            app:layout_constraintTop_toBottomOf="@+id/perfil"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/closeSesion"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/gradient"
+            android:text="Cerrar sesión"
+            android:textColor="@color/white"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            app:layout_constraintEnd_toEndOf="@+id/cuentaa"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="@+id/cuentaa"
+            app:layout_constraintTop_toBottomOf="@+id/cuentaa"/>
+
+    </LinearLayout>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

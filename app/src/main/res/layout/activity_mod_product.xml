@@ -4,73 +4,78 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".modProduct">
-
-    <EditText
-        android:id="@+id/pelucheName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Nombre del peluche"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.19" />
-
-    <EditText
-        android:id="@+id/plesio2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Precio"
-        android:inputType="text"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="217dp" />
-
-    <EditText
-        android:id="@+id/description2"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginRight="50dp"
-        android:gravity="top"
-        android:hint="Descripcion"
-        android:inputType="text|textMultiLine"
-        app:layout_constraintEnd_toEndOf="@+id/plesio2"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="@+id/plesio2"
-        app:layout_constraintTop_toBottomOf="@+id/plesio2" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/subil"
-        android:layout_width="129dp"
-        android:layout_height="41dp"
-        android:background="@drawable/gradient"
-        android:text="Finalizar"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.866"
-        app:layout_goneMarginBottom="500dp" />
+    tools:context=".modProduct"
+    android:background="@drawable/fondonube">
 
     <ImageView
         android:id="@+id/volver5"
-        android:layout_width="49dp"
-        android:layout_height="41dp"
+        android:layout_width="43dp"
+        android:layout_height="30dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/patras"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintHorizontal_bias="0.078"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023"
-        app:srcCompat="@drawable/baseline_keyboard_return_24"
+        app:layout_constraintVertical_bias="0.037"
         />
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="300dp"
+        android:layout_height="410dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/volver5"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:background="@drawable/background_rounded">
+
+        <EditText
+            android:id="@+id/pelucheName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Nombre del peluche"
+            android:layout_marginTop="50dp"
+            android:inputType="text"
+            android:layout_gravity="center_horizontal" />
+
+        <EditText
+            android:id="@+id/plesio2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Precio"
+            android:inputType="text"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center_horizontal" />
+
+        <EditText
+            android:id="@+id/description2"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:gravity="top"
+            android:hint="Descripcion"
+            android:inputType="text|textMultiLine"
+            android:layout_gravity="center_horizontal" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/subil"
+            android:layout_width="129dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/gradient"
+            android:text="Finalizar"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

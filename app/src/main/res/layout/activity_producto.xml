@@ -4,85 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Cuenta">
+    tools:context=".Cuenta"
+    android:background="@drawable/fondonube">
 
-
-    <ImageView
-        android:id="@+id/imgno"
-        android:layout_width="180dp"
-        android:layout_height="140dp"
-        android:layout_marginTop="116dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/descript"
-        android:layout_width="228dp"
-        android:layout_height="89dp"
-        android:layout_marginTop="4dp"
-        android:gravity="center"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/prec"
-        app:layout_constraintHorizontal_bias="0.47"
-        app:layout_constraintStart_toStartOf="@+id/prec"
-        app:layout_constraintTop_toBottomOf="@+id/prec" />
-
-    <TextView
-        android:id="@+id/datos"
-        android:layout_width="211dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:text="Product"
-        android:textAlignment="center"
-        android:textSize="30dp"
-        app:layout_constraintEnd_toEndOf="@+id/imgno"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="@+id/imgno"
-        app:layout_constraintTop_toBottomOf="@+id/imgno" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/cestilla"
-        android:layout_width="129dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/gradient"
-        android:text="Añadir a la cesta"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/descript"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="@+id/descript"
-        app:layout_constraintTop_toBottomOf="@+id/descript" />
-
-    <TextView
-        android:id="@+id/prec"
-        android:layout_width="0dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="12dp"
-        android:gravity="center"
-        android:text="19.99 €"
-        android:textAlignment="center"
-        android:textSize="25dp"
-        app:layout_constraintEnd_toEndOf="@+id/datos"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/datos"
-        app:layout_constraintTop_toBottomOf="@+id/datos" />
 
     <ImageView
         android:id="@+id/volver3"
-        android:layout_width="33dp"
-        android:layout_height="32dp"
+        android:layout_width="43dp"
+        android:layout_height="30dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/patras"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.108"
+        app:layout_constraintHorizontal_bias="0.135"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.078"
-        app:srcCompat="@drawable/baseline_keyboard_return_24" />
+        app:layout_constraintVertical_bias="0.069" />
 
     <ImageView
         android:id="@+id/del"
@@ -90,11 +27,102 @@
         android:layout_height="41dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.862"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.855"
+        app:layout_constraintStart_toEndOf="@+id/volver3"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.065"
+        app:layout_constraintVertical_bias="0.053"
         app:srcCompat="@drawable/baseline_delete_forever_24" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginBottom="140dp"
+        android:background="@drawable/background_rounded"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/volver3"
+        app:layout_constraintVertical_bias="0.6">
+
+        <ImageView
+            android:id="@+id/imgno"
+            android:layout_width="180dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/datos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text="Producto"
+                android:textAlignment="center"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/prec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:text="19.99"
+                android:textAlignment="center"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/eurillo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:text="€"
+                android:textAlignment="center"
+                android:textSize="25dp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/descript"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textSize="20dp" />
+
+
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cestilla"
+        android:layout_width="129dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/gradient"
+        android:text="Añadir a la cesta"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
     <Button
         android:id="@+id/mod"
@@ -108,5 +136,6 @@
         app:layout_constraintStart_toStartOf="@+id/cestilla"
         app:layout_constraintTop_toBottomOf="@+id/cestilla"
         app:layout_constraintVertical_bias="0.186" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

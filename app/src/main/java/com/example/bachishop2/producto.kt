@@ -6,6 +6,8 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
+import androidx.core.view.isVisible
 import com.example.bachishop2.databinding.ActivityMainBinding
 import com.example.bachishop2.databinding.ActivityProductoBinding
 import com.example.bachishop2.ui.home.HomeFragment
@@ -34,11 +36,14 @@ class producto : AppCompatActivity() {
         binding.datos.text = sharedPreferences.getString("nombre", "")
         binding.prec.text = sharedPreferences.getFloat("precio", 0f).toString()
         binding.descript.text = sharedPreferences.getString("desc", "")
-
+        var email: String? = sharedPreferences.getString("correo", "")
         binding.imgno.setImageResource(sharedPreferences.getInt("img", 0))
         val product:String = sharedPreferences.getString("idProducto", "").toString()
         val coleccion:String = sharedPreferences.getString("coleccion", "").toString()
-
+        if (!email.equals("ryunex03@gmail.com")){
+            binding.del.isVisible = false
+            binding.mod.isVisible = false
+        }
         binding.del.setOnClickListener {
             val db = Firebase.firestore
             AlertDialog.Builder(this)
@@ -50,6 +55,11 @@ class producto : AppCompatActivity() {
                     .delete()
                     .addOnSuccessListener { Log.d("TAG", "DocumentSnapshot successfully deleted!") }
                     .addOnFailureListener { e -> Log.w("TAG", "Error deleting document", e) }
+                    Toast.makeText(
+                        baseContext,
+                        "Producto eliminado con exito",
+                        Toast.LENGTH_LONG,
+                    ).show()
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
                 })

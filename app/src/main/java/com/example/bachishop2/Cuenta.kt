@@ -25,18 +25,20 @@ class Cuenta : AppCompatActivity() {
 
         sharedPreferences = getSharedPreferences("MyPreferences", MODE_PRIVATE)
 
-
-        val url = URL(sharedPreferences.getString("foto", ""))
-        if(url.equals(""))
+        if (sharedPreferences.contains("correoG")) {
+            val url = URL(sharedPreferences.getString("foto", ""))
+            if (url.equals(""))
+                binding.perfil.setImageResource(R.drawable.usuario)
+            else {
+                val policy = ThreadPolicy.Builder()
+                    .permitAll().build()
+                StrictMode.setThreadPolicy(policy)
+                val bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream())
+                binding.perfil.setImageBitmap(bmp)
+            }
+        }else{
             binding.perfil.setImageResource(R.drawable.usuario)
-        else {
-            val policy = ThreadPolicy.Builder()
-                .permitAll().build()
-            StrictMode.setThreadPolicy(policy)
-            val bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream())
-            binding.perfil.setImageBitmap(bmp)
         }
-
 
 
         binding.cuentaa.text = "Email: " + sharedPreferences.getString("correo", "")
